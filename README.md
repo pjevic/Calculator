@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL: ](https://pjevic.github.io/Calculator/)
+- [Live Site URL: ](https://calculator-milanpjevic.netlify.app)
 
 ## Author
 
