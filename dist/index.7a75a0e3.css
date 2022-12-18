@@ -1,0 +1,357 @@
+:root {
+  --bg--main--1: #3a4764;
+  --bg--main--2: #e6e6e6;
+  --bg--main--3: #160628;
+  --bg--toggle--keypad--1: #232c43;
+  --bg--toggle--keypad--2: #d1cccc;
+  --bg--toggle--keypad--3: #1d0934;
+  --bg--screen--1: #182034;
+  --bg--screen--2: #ededed;
+  --bg--screen--3: #1d0934;
+  --key--del--reset--1: #637097;
+  --key--del--reset--2: #377f86;
+  --key--del--reset--3: #58077d;
+  --key--del--reset--shadow--1: #404e72;
+  --key--del--reset--shadow--2: #1b5f65;
+  --key--del--reset--shadow--3: #bc15f4;
+  --key--toggle--equal--1: #d03f2f;
+  --key--toggle--equal--2: #ca5502;
+  --key--toggle--equal--3: #00e0d1;
+  --key--toggle--equal--shadow--1: #93261a;
+  --key--toggle--equal--shadow--2: #893901;
+  --key--toggle--equal--shadow--3: #6cf9f2;
+  --key--main--1: #eae3dc;
+  --key--main--2: #e5e4e1;
+  --key--main--3: #341c4f;
+  --key--main--shadow--1: #b4a597;
+  --key--main--shadow--2: #a69d91;
+  --key--main--shadow--3: #871c9c;
+  --text--header--input--1: #fff;
+  --text--header--input--2: #35352c;
+  --text--header--input--3: #ffe53d;
+  --text--main--1: #444b5a;
+  --text--main--2: #35352c;
+  --text--main--3: #ffe53d;
+  --text--del--reset: #fff;
+  --text--equal--1: #fff;
+  --text--equal--3: #1b2428;
+}
+
+.theme--1 {
+  --bg--main: var(--bg--main--1);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--1);
+  --bg--screen: var(--bg--screen--1);
+  --key--del--reset--bg: var(--key--del--reset--1);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--1);
+  --key--toggle--equal: var(--key--toggle--equal--1);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--1);
+  --key--main: var(--key--main--1);
+  --key--main--shadow: var(--key--main--shadow--1);
+  --text--header--input: var(--text--header--input--1);
+  --text--main: var(--text--main--1);
+  --text--equal: var(--text--equal--1);
+}
+
+.theme--2 {
+  --bg--main: var(--bg--main--2);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--2);
+  --bg--screen: var(--bg--screen--2);
+  --key--del--reset--bg: var(--key--del--reset--2);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--2);
+  --key--toggle--equal: var(--key--toggle--equal--2);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--2);
+  --key--main: var(--key--main--2);
+  --key--main--shadow: var(--key--main--shadow--2);
+  --text--header--input: var(--text--header--input--2);
+  --text--main: var(--text--main--2);
+  --text--equal: var(--text--equal--1);
+}
+
+.theme--3 {
+  --bg--main: var(--bg--main--3);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--3);
+  --bg--screen: var(--bg--screen--3);
+  --key--del--reset--bg: var(--key--del--reset--3);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--3);
+  --key--toggle--equal: var(--key--toggle--equal--3);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--3);
+  --key--main: var(--key--main--3);
+  --key--main--shadow: var(--key--main--shadow--3);
+  --text--header--input: var(--text--header--input--3);
+  --text--main: var(--text--main--3);
+  --text--equal: var(--text--equal--3);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg--main);
+  justify-content: center;
+  align-items: center;
+  transition: all .6s;
+  display: flex;
+}
+
+.container {
+  max-width: 58.3rem;
+  margin-inline: auto;
+  padding: 2.2rem;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 3.8rem;
+  display: flex;
+}
+
+.header__box--left {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.header__box--right {
+  width: 8rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: -.8rem;
+  display: flex;
+}
+
+.header__box--buttons {
+  justify-content: space-around;
+  display: flex;
+}
+
+.header__logo {
+  color: var(--text--header--input);
+  margin-left: .7rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: .6;
+}
+
+.header__text {
+  color: var(--text--header--input);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: .2rem;
+  margin-right: 2.7rem;
+  font-size: 1.2rem;
+}
+
+.header__theme-switcher {
+  color: var(--text--header--input);
+  cursor: pointer;
+  background-color: #0000;
+  padding: .5rem .75rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.header__box--input {
+  margin-bottom: .2rem;
+}
+
+.header__input {
+  appearance: none;
+  width: 100%;
+  height: 2.55rem;
+  background-color: var(--bg--toggle--keypad);
+  border-radius: 5rem;
+  padding: 0 .5rem;
+}
+
+.header__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  background-color: var(--key--toggle--equal);
+  z-index: 3;
+  border-radius: 50%;
+  transition: all .25s;
+}
+
+.header__input::-webkit-slider-thumb:hover, .calculator__key--del:hover, .calculator__key--reset:hover, .calculator__key--equal:hover {
+  filter: brightness(1.5);
+}
+
+.calculator__input {
+  width: 100%;
+  background-color: var(--bg--screen);
+  color: var(--text--header--input);
+  text-align: right;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  margin-bottom: 2.3rem;
+  padding: 4rem 3.2rem 3.8rem;
+  font-size: 5.4rem;
+}
+
+.calculator__keypad {
+  background-color: var(--bg--toggle--keypad);
+  color: var(--text--main);
+  border-radius: 1rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.8rem 2.5rem;
+  padding: 3.2rem 3.2rem 3.8rem 3rem;
+  display: grid;
+}
+
+.calculator__key {
+  background-color: var(--key--main);
+  color: var(--text--main);
+  box-shadow: 0 .4rem 0rem var(--key--main--shadow);
+  cursor: pointer;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem 0 .9rem;
+  font-size: 4rem;
+  display: flex;
+}
+
+.calculator__key--0 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.calculator__key--1 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.calculator__key--2 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.calculator__key--3 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.calculator__key--4 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.calculator__key--5 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.calculator__key--6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.calculator__key--7 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.calculator__key--8 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.calculator__key--9 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.calculator__key--comma {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.calculator__key--add {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.calculator__key--subtract {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+.calculator__key--multiply {
+  grid-area: 4 / 4 / 5 / 5;
+}
+
+.calculator__key--divide {
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+.calculator__key--del {
+  text-transform: uppercase;
+  background-color: var(--key--del--reset--bg);
+  box-shadow: 0 .4rem 0 var(--key--del--reset--shadow);
+  color: var(--text--del--reset);
+  grid-area: 1 / 4 / 2 / 5;
+  font-size: 2.7rem;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+.calculator__key--reset {
+  text-transform: uppercase;
+  background-color: var(--key--del--reset--bg);
+  box-shadow: 0 .4rem 0 var(--key--del--reset--shadow);
+  color: var(--text--del--reset);
+  letter-spacing: 0;
+  grid-area: 5 / 1 / 6 / 3;
+  font-size: 2.75rem;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+.calculator__key--equal {
+  background-color: var(--key--toggle--equal);
+  box-shadow: 0 .4rem 0 var(--key--toggle--equal--shadow);
+  color: var(--text--equal);
+  grid-area: 5 / 3 / 6 / 5;
+  font-size: 2.7rem;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 1rem;
+  }
+
+  .header {
+    margin-bottom: 4.5rem;
+  }
+
+  .header__box--right {
+    width: 9rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .header__logo {
+    margin-bottom: -.5rem;
+    margin-left: .9rem;
+    font-size: 3rem;
+  }
+
+  .header__text {
+    margin-bottom: -.91rem;
+    margin-right: 2.9rem;
+  }
+
+  .calculator__input {
+    padding: 2.5rem;
+    font-size: 3.9rem;
+  }
+
+  .calculator__keypad {
+    gap: 1.7rem 1.3rem;
+    padding: 2.5rem;
+  }
+
+  .calculator__key {
+    border-radius: .5rem;
+    padding: 2rem 0 1.2rem;
+    font-size: 3rem;
+  }
+
+  .calculator__key--del, .calculator__key--reset, .calculator__key--equal {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=index.7a75a0e3.css.map */

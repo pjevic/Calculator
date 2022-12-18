@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir ./dist"
+  },
+  "author": "Milan Pjevic",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.1"
+  }
+}

@@ -1,0 +1,392 @@
+:root {
+  --bg--main--1: #3a4764;
+  --bg--main--2: #e6e6e6;
+  --bg--main--3: #160628;
+  --bg--toggle--keypad--1: #232c43;
+  --bg--toggle--keypad--2: #d1cccc;
+  --bg--toggle--keypad--3: #1d0934;
+  --bg--screen--1: #182034;
+  --bg--screen--2: #ededed;
+  --bg--screen--3: #1d0934;
+  --key--del--reset--1: #637097;
+  --key--del--reset--2: #377f86;
+  --key--del--reset--3: #58077d;
+  --key--del--reset--shadow--1: #404e72;
+  --key--del--reset--shadow--2: #1b5f65;
+  --key--del--reset--shadow--3: #bc15f4;
+  --key--toggle--equal--1: #d03f2f;
+  --key--toggle--equal--2: #ca5502;
+  --key--toggle--equal--3: #00e0d1;
+  --key--toggle--equal--shadow--1: #93261a;
+  --key--toggle--equal--shadow--2: #893901;
+  --key--toggle--equal--shadow--3: #6cf9f2;
+  --key--main--1: #eae3dc;
+  --key--main--2: #e5e4e1;
+  --key--main--3: #341c4f;
+  --key--main--shadow--1: #b4a597;
+  --key--main--shadow--2: #a69d91;
+  --key--main--shadow--3: #871c9c;
+  --text--header--input--1: #ffffff;
+  --text--header--input--2: #35352c;
+  --text--header--input--3: #ffe53d;
+  --text--main--1: #444b5a;
+  --text--main--2: #35352c;
+  --text--main--3: #ffe53d;
+  --text--del--reset: #ffffff;
+  --text--equal--1: #ffffff;
+  --text--equal--3: #1b2428;
+}
+
+.theme--1 {
+  --bg--main: var(--bg--main--1);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--1);
+  --bg--screen: var(--bg--screen--1);
+  --key--del--reset--bg: var(--key--del--reset--1);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--1);
+  --key--toggle--equal: var(--key--toggle--equal--1);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--1);
+  --key--main: var(--key--main--1);
+  --key--main--shadow: var(--key--main--shadow--1);
+  --text--header--input: var(--text--header--input--1);
+  --text--main: var(--text--main--1);
+  --text--equal: var(--text--equal--1);
+}
+
+.theme--2 {
+  --bg--main: var(--bg--main--2);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--2);
+  --bg--screen: var(--bg--screen--2);
+  --key--del--reset--bg: var(--key--del--reset--2);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--2);
+  --key--toggle--equal: var(--key--toggle--equal--2);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--2);
+  --key--main: var(--key--main--2);
+  --key--main--shadow: var(--key--main--shadow--2);
+  --text--header--input: var(--text--header--input--2);
+  --text--main: var(--text--main--2);
+  --text--equal: var(--text--equal--1);
+}
+
+.theme--3 {
+  --bg--main: var(--bg--main--3);
+  --bg--toggle--keypad: var(--bg--toggle--keypad--3);
+  --bg--screen: var(--bg--screen--3);
+  --key--del--reset--bg: var(--key--del--reset--3);
+  --key--del--reset--shadow: var(--key--del--reset--shadow--3);
+  --key--toggle--equal: var(--key--toggle--equal--3);
+  --key--toggle--equal--shadow: var(--key--toggle--equal--shadow--3);
+  --key--main: var(--key--main--3);
+  --key--main--shadow: var(--key--main--shadow--3);
+  --text--header--input: var(--text--header--input--3);
+  --text--main: var(--text--main--3);
+  --text--equal: var(--text--equal--3);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.6s;
+}
+
+.container {
+  max-width: 58.3rem;
+  padding: 2.2rem;
+  margin-inline: auto;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 3.8rem;
+  display: flex;
+}
+
+.header__box--left {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.header__box--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 8rem;
+  margin-bottom: -0.8rem;
+}
+
+.header__box--buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__logo {
+  color: var(--text--header--input);
+  font-size: 3.2rem;
+  line-height: 0.6;
+  margin-left: 0.7rem;
+  font-weight: 700;
+}
+
+.header__text {
+  color: var(--text--header--input);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-right: 2.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.header__theme-switcher {
+  color: var(--text--header--input);
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.header__box--input {
+  margin-bottom: 0.2rem;
+}
+
+.header__input {
+  appearance: none;
+  width: 100%;
+  height: 2.55rem;
+  border-radius: 5rem;
+  background-color: var(--bg--toggle--keypad);
+  padding: 0 0.5rem;
+}
+
+.header__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--key--toggle--equal);
+  z-index: 3;
+  transition: all 0.25s;
+}
+
+.header__input::-webkit-slider-thumb:hover,
+.calculator__key--del:hover,
+.calculator__key--reset:hover,
+.calculator__key--equal:hover {
+  filter: brightness(1.5);
+}
+
+.calculator__input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: var(--bg--screen);
+  color: var(--text--header--input);
+  font-size: 5.4rem;
+  padding: 4rem 3.2rem 3.8rem 3.2rem;
+  border-radius: 1rem;
+  text-align: right;
+  margin-bottom: 2.3rem;
+}
+
+.calculator__keypad {
+  background-color: var(--bg--toggle--keypad);
+  color: var(--text--main);
+  padding: 3.2rem 3.2rem 3.8rem 3rem;
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 2.5rem;
+  row-gap: 2.8rem;
+}
+
+.calculator__key {
+  background-color: var(--key--main);
+  color: var(--text--main);
+  font-size: 4rem;
+  padding: 1.4rem 0 0.9rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0rem var(--key--main--shadow);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator__key--0 {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.calculator__key--1 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.calculator__key--2 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.calculator__key--3 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.calculator__key--4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.calculator__key--5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.calculator__key--6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.calculator__key--7 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.calculator__key--8 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.calculator__key--9 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.calculator__key--comma {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.calculator__key--add {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.calculator__key--subtract {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+.calculator__key--multiply {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+.calculator__key--divide {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.calculator__key--del {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+
+  text-transform: uppercase;
+  background-color: var(--key--del--reset--bg);
+  box-shadow: 0 0.4rem 0 var(--key--del--reset--shadow);
+  color: var(--text--del--reset);
+  font-size: 2.7rem;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+.calculator__key--reset {
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
+  text-transform: uppercase;
+  background-color: var(--key--del--reset--bg);
+  box-shadow: 0 0.4rem 0 var(--key--del--reset--shadow);
+  color: var(--text--del--reset);
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: 0rem;
+  transition: all 0.25s;
+}
+
+.calculator__key--equal {
+  grid-column: 3 / 5;
+  grid-row: 5 / 6;
+
+  background-color: var(--key--toggle--equal);
+  box-shadow: 0 0.4rem 0 var(--key--toggle--equal--shadow);
+  color: var(--text--equal);
+  font-size: 2.7rem;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 1rem;
+  }
+
+  .header {
+    margin-bottom: 4.5rem;
+  }
+
+  .header__box--right {
+    width: 9rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .header__logo {
+    font-size: 3rem;
+    margin-left: 0.9rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .header__text {
+    margin-right: 2.9rem;
+    margin-bottom: -0.91rem;
+  }
+
+  .calculator__input {
+    font-size: 3.9rem;
+    padding: 2.5rem;
+  }
+
+  .calculator__keypad {
+    padding: 2.5rem;
+
+    column-gap: 1.3rem;
+    row-gap: 1.7rem;
+  }
+
+  .calculator__key {
+    font-size: 3rem;
+    padding: 2rem 0 1.2rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .calculator__key--del {
+    font-size: 2rem;
+  }
+
+  .calculator__key--reset {
+    font-size: 2rem;
+  }
+
+  .calculator__key--equal {
+    font-size: 2rem;
+  }
+}

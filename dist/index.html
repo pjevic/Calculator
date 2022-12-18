@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.654148d5.png">
+
+    <title>Calculator App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/index.62440f9c.css">
+    <link rel="stylesheet" href="/index.7a75a0e3.css">
+    <script defer="" src="/index.975ef6c8.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__box header__box--left">
+          <h1 class="header__logo">calc</h1>
+          <p class="header__text">theme</p>
+        </div>
+        <div class="header__box header__box--right">
+          <div class="header__box header__box--buttons">
+            <button class="header__theme-switcher header__theme-swither--1" data-theme="1">1</button>
+            <button class="header__theme-switcher header__theme-swither--2" data-theme="2">2</button>
+            <button class="header__theme-switcher header__theme-swither--3" data-theme="3">3</button>
+          </div>
+          <div class="header__box header__box--input">
+            <input type="range" id="themeSwitcher" min="1" max="3" class="header__input">
+          </div>
+        </div>
+      </header>
+      <form action="javascript:;" class="calculator">
+        <input type="text" class="calculator__input">
+        <div class="calculator__keypad">
+          <button type="button" class="calculator__key calculator__key--0" value="0" data-key="0">0</button>
+          <button type="button" class="calculator__key calculator__key--1" value="1" data-key="1">1</button>
+          <button type="button" class="calculator__key calculator__key--2" value="2" data-key="2">2</button>
+          <button type="button" class="calculator__key calculator__key--3" value="3" data-key="3">3</button>
+          <button type="button" class="calculator__key calculator__key--4" value="4" data-key="4">4</button>
+          <button type="button" class="calculator__key calculator__key--5" value="5" data-key="5">5</button>
+          <button type="button" class="calculator__key calculator__key--6" value="6" data-key="6">6</button>
+          <button type="button" class="calculator__key calculator__key--7" value="7" data-key="7">7</button>
+          <button type="button" class="calculator__key calculator__key--8" value="8" data-key="8">8</button>
+          <button type="button" class="calculator__key calculator__key--9" value="9" data-key="9">9</button>
+
+          <button type="button" class="calculator__key calculator__key--comma" value=".">.</button>
+
+          <button type="button" class="calculator__key calculator__key--add" value="+">+</button>
+          <button type="button" class="calculator__key calculator__key--subtract" value="-">-</button>
+          <button type="button" class="calculator__key calculator__key--multiply" value="*">x</button>
+          <button type="button" class="calculator__key calculator__key--divide" value="/">/</button>
+
+          <button type="button" class="calculator__key calculator__key--del">del</button>
+          <button type="reset" class="calculator__key calculator__key--reset">reset</button>
+          <button type="submit" class="calculator__key calculator__key--equal">=</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

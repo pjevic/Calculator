@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1, body, button, input {
+  font-family: League Spartan, sans-serif;
+  font-weight: 700;
+}
+
+fieldset, button {
+  border: none;
+}
+
+/*# sourceMappingURL=index.62440f9c.css.map */
